@@ -1,0 +1,20 @@
+<template name="blab">
+	{{> nav_bar }}
+
+		<div id="messages">
+			{{#each allMessages }}
+
+				{{#if current_email }}
+					{{> message_me }}
+				{{else}}
+					{{> message }}
+				{{/if}}
+			{{/each}}
+		</div>
+
+
+		<div id="message_box">
+		{{> message_box }}
+		</div>
+
+</template>
